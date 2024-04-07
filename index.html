@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>TOPS OF CEBU</h1>
+            <p>Popular observation spot with casual dining<br> options & sweeping views of the city.</p>
+        </div>
+    </div>
+    <!-----------about------------>
+      <div class="About" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Pots.jpg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About</h1>
+                    <p>Tops Cebu Lookout is a popular tourist destination in Cebu, Philippines,
+                     known for its stunning panoramic view Perched on the hills of Busay, approximately 
+                     600 meters above sea level, this lookout offers unobstructed vistas of Cebu City, Mactan Island,
+                     and the surrounding mountains.</p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('Location and Accessibility')">
+                        Location and Accessibility</p>
+                        <p class="tab-links" onclick="openTab('Best Time to Visit')">Best Time to Visit</p>
+                        <p class="tab-links" onclick="openTab('Facilities and Amenities')">Facilities and Amenities</p>
+                        <p class="tab-links" onclick="openTab('Insider Tips')">Insider Tips</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="Location and Accessibility">
+                        <ul>
+                            <li><span>Tops Cebu Lookout is located in the Barangay Busay area,
+                          just a short drive from Cebu City. The tops lookout is situated on a hilltop,
+                         offering visitors a breathtaking view of the city and beyond. To reach Tops,
+                         you can either drive your private vehicle or take public transportation.</span></li>
+                            <li><span>If you’re driving, you can easily find your way to Tops by
+                     following the road signs from JY Square Mall in Lahug. The road leading to Tops is well-paved 
+                     but can be narrow and winding, so exercise caution while driving. Motorcycle taxis,
+                     known as habal-habal, are also available for hire if you prefer a more adventurous ride.</span></li>
+                            <li><span>For those relying on public transportation, you can take a jeepney or taxi 
+                    from Cebu City to JY Square Mall. From there, you can hire a motorcycle taxi or take another jeepney
+                     that goes directly to Tops. It’s always a good idea to confirm with the driver that they are going 
+                     to Tops Cebu Lookout to ensure a hassle-free journey.</span></li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Best Time to Visit">
+                        <ul>
+                            <li><span>To fully appreciate the beauty of Tops Cebu Lookout, 
+                    it’s recommended to visit during sunrise or sunset. Arriving early in the morning allows you
+                     to witness the city come alive as the sun rises, casting a soft glow over the landscape. 
+                     Alternatively, visiting during sunset offers a different perspective, as the city lights begin 
+                     to twinkle against the darkening sky.</span></li>
+                            <li><span>If you prefer a quieter experience, try to avoid peak hours, especially
+                     on weekends or holidays when the lookout can get crowded. Weekdays are generally less busy,
+                      allowing you to enjoy the serene atmosphere and have more space to capture that perfect shot.</span></li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Facilities and Amenities">
+                        <ul>
+                            <li><span>Tops Cebu Lookout provides several facilities and amenities to enhance visitors’
+                     experience. The lookout area has viewing decks equipped with binoculars, allowing you to get a 
+                     closer look at the cityscape. There are also picnic areas where you can enjoy a leisurely meal
+                     while taking in the stunning views.</span></li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Insider Tips">
+                        <ul>
+                            <li><span>Dress comfortably:<br>As the lookout is situated at a higher altitude,
+                     it can get chilly, especially during the early morning or late evening. Bring a light jacket
+                     or sweater to keep yourself warm.</span></li>
+                            <li><span>Bring your camera or smartphone:<br>Tops Cebu Lookout offers picture-perfect views,
+                     so don’t forget to capture the moment. Whether you’re a professional photographer or just want to snap
+                     some memorable shots, you’ll want to have your camera or smartphone handy.</span></li>
+                            <li><span>Visit during weekdays:<br> If possible, plan your visit for a weekday to avoid the crowds.
+                     This will give you a more relaxed and peaceful experience.</span></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-------------------Contacts------------------------->
+       <div id="contact">
+         <div class="container">
+            <div class="row">
+               <div class="contact-left">
+                 <h1 class="sub-title">Contact</h1>
+                 <p><i class="fa-solid fa-paper-plane"></i>topscebu123@gmail.com</p>
+                 <p><i class="fad fa-phone-square-alt"></i>+63 969-647-5131</p>
+               </div>
+               <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name">
+                    <input type="text" name="Email" placeholder="Your Email" Required>
+                    <textarea name="Message"  rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn1">Submit</button>
+                </form>
+               </div>
+            </div>
+         </div>
+       </div>
+      <div class="credits">
+        <p>Made wih <i class="fas fa-heart"></i> by Febbie Rosell & Criz Jhun Tabay</p>
+    </div>
+      <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName){
+            for(tabLink of tabLinks){
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents){
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+      </script>
+</body>
+</html>
